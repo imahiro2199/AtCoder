@@ -1,8 +1,10 @@
 import os
+import sys
 
 # user file
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from LIB import text_utils as tu
 import rsa
-from ..LIB import text_utils as tu
 
 PS_CNCT = tu.PS_CNCT
 

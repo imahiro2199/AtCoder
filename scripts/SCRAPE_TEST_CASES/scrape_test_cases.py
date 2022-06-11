@@ -6,8 +6,9 @@ from bs4 import BeautifulSoup
 import time
 
 # user file
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from LIB import text_utils as tu
 import config
-from ..LIB import text_utils as tu
 
 PS_CNCT = tu.PS_CNCT
 

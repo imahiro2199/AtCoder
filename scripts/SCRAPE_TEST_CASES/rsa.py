@@ -1,10 +1,12 @@
 import os
+import sys
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import getpass
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # user file
-from ..LIB import text_utils as tu
+from LIB import text_utils as tu
 
 PS_CNCT = tu.PS_CNCT
 
