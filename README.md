@@ -1,7 +1,7 @@
 # AtCoder repository
 ## 概要
 コンテスト中にコーディングを行うためのツールやコード置き場を掘り起こしたリポジトリ。  
-現在のところ完成したコードを公開する予定はない(AtCoder上で閲覧できるため)。  
+現在のところAtCoderの完成したコードを登録する予定はない(AtCoder上で閲覧できるため)。  
 
 ## AtCoder account
 [**imahiro**](https://atcoder.jp/users/imahiro)
