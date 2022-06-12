@@ -63,7 +63,7 @@ def generate_test_cases(task_top_url, session):
         task_top_page = session.get(task_top_url, headers = HEADERS)
         bs_task_top   = BeautifulSoup(task_top_page.text, "lxml")
     except requests.exceptions.RequestException as e:
-        print (tu.red_text('ERROR'),'could NOT access to', tsk_url)
+        print (tu.red_text('ERROR'),'could NOT access to', task_top_url)
         print(e)
         return False
     else:
@@ -83,7 +83,7 @@ def generate_test_cases(task_top_url, session):
 
 # Login (required to access real-time contest)
 def login(login_url, session): 
-    print(tu.yellow_text('Login to' + login_url))
+    print(tu.yellow_text('Login to ' + login_url))
     login_page   = session.get(login_url, headers = HEADERS)
     login_lxml   = BeautifulSoup(login_page.text, 'lxml')
     csrf_token   = login_lxml.find(attrs={'name': 'csrf_token'}).get('value')
@@ -93,8 +93,7 @@ def login(login_url, session):
         "password"  : config.PASSWORD
     }
     login_result = session.post(login_url, data = login_info, headers = HEADERS)
-    login_result.raise_for_status()
-    if (login_result.status_code==200):
+    if (login_result.url != login_url):
         print(" -", tu.green_text("success!"))
         return session
     else:
