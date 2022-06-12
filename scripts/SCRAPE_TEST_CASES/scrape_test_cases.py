@@ -37,7 +37,7 @@ def generate_test_case(tsk_url, session):
         test_num   += 1
         splitted_url = tsk_url.split('_')
         if(len(splitted_url) > 1):
-            test_letter = tsk_url.split('_')[len(splitted_url)-1]
+            test_letter = tsk_url.split('_')[len(splitted_url)-1].lower()
         if (not os.path.isdir(TEST_CASE_HOME)):
             os.mkdir(TEST_CASE_HOME)
         test_case_path       = TEST_CASE_HOME + '/' + test_letter + '.txt'
