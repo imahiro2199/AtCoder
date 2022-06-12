@@ -31,7 +31,7 @@ AtCoder のコンテストページにアクセスし、入力例と出力例を
 - 取扱いに注意すること。
 - `config.py` の `USERNAME`, `PASSWORD` に直接書き込むこともできる、、、
 
-## 必要環境
+## 実行環境
 - Python (3.X.X)
     - PyCrypto
         ```shell
