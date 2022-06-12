@@ -4,6 +4,9 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import getpass
 
+# user files
+import config
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # user file
 from LIB import text_utils as tu
@@ -80,3 +83,6 @@ def ecd_msg(key_path = KEY_PATH, username_path = USERNAME_PATH, password_path = 
     for msg in msg_list:
         msgs.append(decipher_rsa.decrypt(msg).decode())
     return msgs
+
+if __name__ == "__main__":
+    gen_config_files(config.CFG_FOLDER)
