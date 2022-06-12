@@ -97,7 +97,7 @@ def login(login_url, session):
         return session
     else:
         print(" -", tu.red_text("failure"))
-        print("    -", tu.yellow_text("Please execution python " + os.path.dirname(__file__) + PS_CNCT + "config.py"))
+        print("    -", tu.yellow_text("Please execution python " + os.path.dirname(__file__) + PS_CNCT + "login_info_control.py"))
         return None
     return session
 
