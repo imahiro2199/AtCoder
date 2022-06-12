@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import requests
 import sys
 import os
@@ -99,7 +98,7 @@ def login(login_url, session):
     else:
         print(" -", tu.red_text("failure"))
         print("    -", tu.yellow_text("Please execution python " + os.path.dirname(__file__) + PS_CNCT + "config.py"))
-        return NULL
+        return None
     return session
 
 # Main
@@ -123,7 +122,7 @@ def main():
     session = login(LOGIN_URL, session)
     # Sleep for 1 sec to reduce load on the server
     time.sleep(1)
-    if(session == NULL):
+    if(session == None):
         exit()
     if(not generate_test_cases(CONTEST_TOP_URL + '/tasks', session)):
         exit()
