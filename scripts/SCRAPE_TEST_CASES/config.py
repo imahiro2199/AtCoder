@@ -4,7 +4,7 @@ import sys
 # user file
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from LIB import text_utils as tu
-import login_control as lg_ct
+import login_info_control as lg_ct
 
 PS_CNCT = tu.PS_CNCT
 
