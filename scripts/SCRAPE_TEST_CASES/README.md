@@ -32,10 +32,11 @@ AtCoder のコンテストページにアクセスし、入力例と出力例を
 - `config.py` の `USERNAME`, `PASSWORD` に直接書き込むこともできる、、、
 
 ## 実行環境
-- Python (3.X.X)
-    - PyCrypto
+- Python (3.X.X)  
+    以下を `pip` もしくは `pip3` でインストール
+    - Pycryptodome
         ```shell
-        pip install pycrypto
+        pip install pycryptodome
         ```
     - Requests
         ```shell
@@ -45,8 +46,13 @@ AtCoder のコンテストページにアクセスし、入力例と出力例を
         ```shell
         pip install beautifulsoup4
         ```
+    - lxml (BeautifulSoup4 にて使用)
+        ```
+        pip install lxml
+        ```
 
 ## 使用方法
+以下、`python` コマンドは Python 3系で実行するものとする。
 ### テストケースのスクレイピング
 1. `SCRAPE_TEST_CASES` と同階層に[`LIB`](../LIB/) を配置する
     ```
