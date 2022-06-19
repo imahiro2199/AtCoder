@@ -130,13 +130,13 @@ def main():
                 if(not check_result):
                     check_all_green = False
                     print(tu.yellow_text("Input"))
-                    print(input_strs[i])
+                    print('\n'.join(input_strs[0].splitlines()))
                     print()
                     print(tu.yellow_text("Expected Answer"))
-                    print(output_strs[i])
+                    print('\n'.join(output_strs[0].splitlines()))
                     print()
                     print(tu.yellow_text("Your Answer"))
-                    print(out)
+                    print('\n'.join(out.splitlines()))
                     print()
 
     print()
