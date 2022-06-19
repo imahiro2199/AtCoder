@@ -23,6 +23,7 @@ def show_help():
     print(' - args[' + tu.red_text(str(1))   + ']: Question case (lower)')
     print(' - args[' + tu.green_text(str(2)) + ']: Your language [option, default: c++]')
     print('   - e.g., python .\\run_test_case.py', tu.red_text("a"), tu.green_text('c++'))
+    print('   - detail: see \"commands()\" function in config.py')
     print('Input file')
     print(' - answer/[args[1]].txt')
     print('   * Inputs')
@@ -49,6 +50,9 @@ def main():
 
     if(arg_len > 2):
         lang = args[2]
+
+    if(arg_len > 3):
+        option = args[3]
 
     answer_text = '.' + PS_CNCT + config.TEST_CASE_HOME + PS_CNCT + run_question + '.txt'
     build_path  = '.' + PS_CNCT + config.BUILD_FOLDER   + PS_CNCT
@@ -95,7 +99,8 @@ def main():
         if(len(file_texts) > 0 and context_flg):
             output_strs.append("\n".join(file_texts))
     else:
-        print (answer_text, ' is not exist.')
+        print(tu.red_text("[IMPORT ERROR]"))
+        print (' - ', answer_text, ' is not exist.')
         exit()
 
     print(tu.yellow_text("Check test cases"))
