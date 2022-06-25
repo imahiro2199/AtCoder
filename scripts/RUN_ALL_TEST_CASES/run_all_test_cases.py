@@ -133,7 +133,7 @@ def main():
                     print('\n'.join(input_strs[i].splitlines()))
                     print()
                     print(tu.yellow_text("Expected Answer"))
-                    print('\n'.join(output_strs[0].splitlines()))
+                    print('\n'.join(output_strs[i].splitlines()))
                     print()
                     print(tu.yellow_text("Your Answer"))
                     print('\n'.join(out.splitlines()))
