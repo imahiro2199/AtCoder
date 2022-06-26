@@ -19,3 +19,4 @@
 Tool name          | Description
 ------------------ | ---------------------------------------
 [**SCRAPE_TEST_CASES**](./scripts/SCRAPE_TEST_CASES/)  | 入力例と出力例をscrapeして`.txt`で出力する
+[**RUN_ALL_TEST_CASES**](./scripts/RUN_ALL_TEST_CASES/) | `.txt`に記載されたテストケースに対して`AC`判定を行う
